@@ -58,7 +58,7 @@ void concatIntArray(int srcA[], size_t srcSizeA,
                     int srcB[], size_t srcSizeB,
                     int dest[], size_t destSizeB);
 
-// Applies a number of condiments to a hotdog.
+// Increases the number of condiments applied to a hotdog.
 // Does not make any changes to hotdogs that have already been prepared.
 //
 // Returns the given hotdog.
