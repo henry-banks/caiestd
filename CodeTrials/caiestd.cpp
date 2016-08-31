@@ -71,6 +71,17 @@ void fiboMyArray(int dest[], size_t destSize)
 
 void concatIntArray(int srcA[], size_t srcSizeA, int srcB[], size_t srcSizeB, int dest[], size_t destSizeB)
 {
+	int j = 0;
+
+	for (int i = 0; i < (srcSizeA); i++)
+	{
+		dest[i] = srcA[i];
+	}
+	for (int i = srcSizeA; i < (srcSizeA + srcSizeB); i++)
+	{
+		dest[i] = srcB[j];
+		j++;
+	}
 }
 
 Hotdog & applyHotdog(Hotdog & targetDog, int relishApps, int mustardApps, int creamCheeseaApps)
