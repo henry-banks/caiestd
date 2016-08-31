@@ -1,4 +1,6 @@
 #include "caiestd.h"
+#include <math.h>
+
 
 Point2D pointAdd(const Point2D & lhs, const Point2D & rhs)
 {
@@ -37,7 +39,13 @@ int pow(int base, int power)
 
 float distance(Point2D first, Point2D second)
 {
-    return 0.0f;
+	float d = 0;
+
+
+
+	d = sqrt(((second.x - first.x)* (second.x - first.x)) + ((second.y - first.y)*(second.y - first.y)));
+
+	return d;
 }
 
 int sum(int nums[], size_t numSize)
