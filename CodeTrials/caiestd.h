@@ -5,6 +5,7 @@
 // Copyright    (c) 2016 Academy of Interactive Entertainment
 //
 
+
 struct Point2D
 {
     float x, y;
