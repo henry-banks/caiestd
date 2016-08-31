@@ -1,4 +1,5 @@
 #include "caiestd.h"
+#include <iostream>
 
 Point2D pointAdd(const Point2D & lhs, const Point2D & rhs)
 {
@@ -58,8 +59,17 @@ Hotdog & applyHotdog(Hotdog & targetDog, int relishApps, int mustardApps, int cr
     return Hotdog();
 }
 
+// zomawia sailo
 void printHotdog(const Hotdog & targetDog)
 {
+	printf("Hotdog is ");
+	if (targetDog.isPrepared) printf("cooked.\n");
+	else printf("not prepared.\n");
+
+	printf("Amount of relish: %d squirt(s)\n", targetDog.relish);
+	printf("Amount of cream cheese (gross): %d spread(s)\n", targetDog.creamCheese);
+	printf("Amount of mustard: %d squirt(s)\n", targetDog.mustard);
+	
 }
 
 void cookHotdog(Hotdog & targetDog)
