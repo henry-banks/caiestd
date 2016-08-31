@@ -2,17 +2,6 @@
 #include <cstdio>
 
 
-
-int divideAndConquer(int nums[], size_t numSize)
-{
-
-	return 0;
-}
-
-
-
-
-/*
 int divideAndConquer(int in1, int in2)
 {
 	if (in1 > in2)
@@ -34,13 +23,12 @@ int divideAndConquer(int in1, int in2)
 
 
 	return 0;
-}*/
+}
 
-/*
-int scanNum()
+
+int scanNum(int in1, int in2)
 {
 	scanf_s("%d %d", &in1, &in2);
 
 	return divideAndConquer(in1, in2);
 }
-*/
