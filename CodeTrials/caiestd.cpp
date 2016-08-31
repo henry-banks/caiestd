@@ -45,7 +45,7 @@ int sum(int nums[], size_t numSize)
     return 0;
 }
 
-void fizzMyArray(int dest[], size_t destSize)
+void fiboMyArray(int dest[], size_t destSize)
 {
 }
 

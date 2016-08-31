@@ -50,8 +50,8 @@ float distance(Point2D first, Point2D second);
 // Returns the sum of all elements in the integer array.
 int sum(int nums[], size_t numSize);
 
-// Populates the array with FizzBuzz values.
-void fizzMyArray(int dest[], size_t destSize);
+// Populates the array with Fibonacci values.
+void fiboMyArray(int dest[], size_t destSize);
 
 // Copy the first and second arrays into the third array.
 void concatIntArray(int srcA[], size_t srcSizeA,
