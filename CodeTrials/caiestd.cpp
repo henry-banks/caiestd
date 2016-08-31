@@ -1,4 +1,5 @@
 #include "caiestd.h"
+#include <iostream>
 
 Point2D pointAdd(const Point2D & lhs, const Point2D & rhs)
 {
@@ -47,6 +48,23 @@ int sum(int nums[], size_t numSize)
 
 void fiboMyArray(int dest[], size_t destSize)
 {
+	int c, first = 0, second = 1, next;
+	
+	for (c = 0; c < destSize; c++)
+	{
+		if (c <= 1)
+			next = c;
+		else
+		{
+			next = first + second;
+			first = second;
+			second = next;
+		}
+
+		dest[c] = next;
+		printf("%d\n", dest[c]);
+	}
+
 }
 
 void concatIntArray(int srcA[], size_t srcSizeA, int srcB[], size_t srcSizeB, int dest[], size_t destSizeB)
