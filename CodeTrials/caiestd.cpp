@@ -1,5 +1,6 @@
 #include "caiestd.h"
 
+
 Point2D pointAdd(const Point2D & lhs, const Point2D & rhs)
 {
     return Point2D();
@@ -62,7 +63,18 @@ float distance(Point2D first, Point2D second)
 
 int sum(int nums[], size_t numSize)
 {
-    return 0;
+
+	int sum = 0;
+
+	for (int i = 0; i < numSize; i++)
+	{
+		sum = sum + nums[i];
+	
+	}
+
+	
+
+    return sum;
 }
 
 void fiboMyArray(int dest[], size_t destSize)
