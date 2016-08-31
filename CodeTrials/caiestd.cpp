@@ -1,5 +1,6 @@
 #include "caiestd.h"
 #include <iostream>
+#include <math.h>
 
 Point2D pointAdd(const Point2D & lhs, const Point2D & rhs)
 {
