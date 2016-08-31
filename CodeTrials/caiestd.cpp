@@ -18,17 +18,37 @@ int divideAndConquer(int nums[], size_t numSize)
 
 int displacementOverlap(int aMin, int aMax, int bMin, int bMax)
 {
-    return 0;
+	float measurement;
+
+	if (aMin < bMin)
+	{
+		int temp = aMin;
+		aMin = bMin;
+		bMin = temp;
+
+		temp = aMax;
+		aMax = bMax;
+		bMax = temp;
+	}
+
+	if (aMax < bMin || (aMax > bMin && aMax < bMax))
+	{
+		return (aMax - bMin);
+	}
+	else //(aMax >= bMax)
+	{
+		return((bMax - bMin) + (bMin - aMin));
+	}
 }
 
 float degToRad(float deg)
 {
-    return 0.0f;
+    return (deg/180.0)*3.14159265358979323846;
 }
 
 float radToDeg(float rad)
 {
-    return 0.0f;
+    return (rad*180.0)/3.14159265358979323846;
 }
 
 int pow(int base, int power)
