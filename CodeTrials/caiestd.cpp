@@ -1,14 +1,25 @@
 #include "caiestd.h"
 #include <iostream>
+#include <math.h>
 
 Point2D pointAdd(const Point2D & lhs, const Point2D & rhs)
 {
-    return Point2D();
+	Point2D placeholder;
+	placeholder.x = lhs.x + rhs.x;
+	placeholder.y = lhs.y + rhs.y;
+	return placeholder;
 }
 
 Point2D pointSub(const Point2D & lhs, const Point2D & rhs)
 {
-    return Point2D();
+	int sub1 = lhs.x - rhs.x;
+	int sub2 = lhs.y - rhs.y;
+
+	Point2D subtract;
+	subtract.x = sub1;
+	subtract.y = sub2;
+
+	return subtract;
 }
 
 
@@ -50,25 +61,69 @@ float radToDeg(float rad)
 
 int pow(int base, int power)
 {
-    return 0;
+	int total;
+	total = pow(base, power);
+	printf("%d \n, total");
+	return 0;
 }
 
 float distance(Point2D first, Point2D second)
 {
-    return 0.0f;
+	float d = 0;
+	//test
+	d = sqrt(((second.x - first.x)* (second.x - first.x)) + ((second.y - first.y)*(second.y - first.y)));
+
+	return d;
 }
 
 int sum(int nums[], size_t numSize)
 {
-    return 0;
+	int sum = 0;
+
+	for (int i = 0; i < numSize; i++)
+	{
+		sum = sum + nums[i];
+
+	}
+
+
+
+	return sum;
 }
 
 void fiboMyArray(int dest[], size_t destSize)
 {
+	int c, first = 0, second = 1, next;
+
+	for (c = 0; c < destSize; c++)
+	{
+		if (c <= 1)
+			next = c;
+		else
+		{
+			next = first + second;
+			first = second;
+			second = next;
+		}
+
+		dest[c] = next;
+		printf("%d\n", dest[c]);
+	}
 }
 
 void concatIntArray(int srcA[], size_t srcSizeA, int srcB[], size_t srcSizeB, int dest[], size_t destSizeB)
 {
+	int j = 0;
+
+	for (int i = 0; i < (srcSizeA); i++)
+	{
+		dest[i] = srcA[i];
+	}
+	for (int i = srcSizeA; i < (srcSizeA + srcSizeB); i++)
+	{
+		dest[i] = srcB[j];
+		j++;
+	}
 }
 
 // Zomawia Sailo
@@ -101,4 +156,5 @@ void printHotdog(const Hotdog & targetDog)
 
 void cookHotdog(Hotdog & targetDog)
 {
+	targetDog.isPrepared = true;
 }
