@@ -74,16 +74,26 @@ void concatIntArray(int srcA[], size_t srcSizeA, int srcB[], size_t srcSizeB, in
 {
 }
 
+// Zomawia Sailo
 Hotdog & applyHotdog(Hotdog & targetDog, int relishApps, int mustardApps, int creamCheeseaApps)
 {
-    return Hotdog();
+	if (targetDog.isPrepared != true) //check if already prepared
+	{
+		targetDog.creamCheese += creamCheeseaApps;
+		targetDog.relish += relishApps;
+		targetDog.mustard += mustardApps;
+		printf("\nAdding %d spread(s) of cream cheese, %d squirt(s) of relish, and %d squirt(s) of mustard.\n",
+			creamCheeseaApps, relishApps, creamCheeseaApps);
+	}
+	
+	return targetDog;
 }
 
-// zomawia sailo
+// Zomawia sailo
 void printHotdog(const Hotdog & targetDog)
 {
 	printf("Hotdog is ");
-	if (targetDog.isPrepared) printf("cooked.\n");
+	if (targetDog.isPrepared) printf("prepared.\n");
 	else printf("not prepared.\n");
 
 	printf("Amount of relish: %d squirt(s)\n", targetDog.relish);
