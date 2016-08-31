@@ -112,6 +112,7 @@
   <ItemGroup>
     <ClCompile Include="caiestd.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="pointAdd.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="caiestd.h" />
