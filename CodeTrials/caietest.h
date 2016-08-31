@@ -12,8 +12,13 @@
     #define FLT_TEST_EPSILON FLT_EPSILON
 #endif
 
-#define ASSERT_EQ(CONDITION, EXPECTED, TESTNAME, MESSAGE) \
-if((CONDITION) != EXPECTED) { fprintf(stderr, "[FAIL] %s // %s", TESTNAME, MESSAGE); } \
+#define ASSERT_TRUE(CONDITION, TESTNAME, MESSAGE) \
+if(!CONDITION) { fprintf(stderr, "[FAIL] %s // %s", TESTNAME, MESSAGE); } \
+else { fprintf(stderr, "[PASS] %s", TESTNAME); } \
+fprintf(stderr, "\n");
+
+#define ASSERT_EQ(EXPECTED, ACTUAL, TESTNAME, MESSAGE) \
+if(ACTUAL != EXPECTED) { fprintf(stderr, "[FAIL] %s // %s", TESTNAME, MESSAGE); } \
 else { fprintf(stderr, "[PASS] %s", TESTNAME); } \
 fprintf(stderr, "\n");
 
