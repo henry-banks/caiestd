@@ -1,7 +1,6 @@
 #include "caiestd.h"
 #include <iostream>
 
-
 Point2D pointAdd(const Point2D & lhs, const Point2D & rhs)
 {
     return Point2D();
@@ -12,56 +11,44 @@ Point2D pointSub(const Point2D & lhs, const Point2D & rhs)
     return Point2D();
 }
 
-
-// Kelsey's 
-/*
-int in1 = 0;
-int in2 = 0;
-
-int divideAndConquer(int in1,int in2)
+int divideAndConquer(int nums[], size_t numSize)
 {
-	if (in1 > in2)
-	{
-		printf(" %d ", in1);
-		return in1;
-	}
-	else if (in1 < in2)
-	{
-		printf(" %d ", in2);
-		return in2;
-	}
-	else if (in1 == in2)
-	{
-		printf("you can't enter the same number!\n");
-
-	}
-
-
-
     return 0;
 }
-
-int scanNum()
-{
-	scanf_s("%d %d", &in1, &in2);
-
-	return divideAndConquer(in1, in2);
-}
-*/
 
 int displacementOverlap(int aMin, int aMax, int bMin, int bMax)
 {
-    return 0;
+	float measurement;
+
+	if (aMin < bMin)
+	{
+		int temp = aMin;
+		aMin = bMin;
+		bMin = temp;
+
+		temp = aMax;
+		aMax = bMax;
+		bMax = temp;
+	}
+
+	if (aMax < bMin || (aMax > bMin && aMax < bMax))
+	{
+		return (aMax - bMin);
+	}
+	else //(aMax >= bMax)
+	{
+		return((bMax - bMin) + (bMin - aMin));
+	}
 }
 
 float degToRad(float deg)
 {
-    return 0.0f;
+    return (deg/180.0)*3.14159265358979323846;
 }
 
 float radToDeg(float rad)
 {
-    return 0.0f;
+    return (rad*180.0)/3.14159265358979323846;
 }
 
 int pow(int base, int power)
@@ -87,13 +74,32 @@ void concatIntArray(int srcA[], size_t srcSizeA, int srcB[], size_t srcSizeB, in
 {
 }
 
+// Zomawia Sailo
 Hotdog & applyHotdog(Hotdog & targetDog, int relishApps, int mustardApps, int creamCheeseaApps)
 {
-    return Hotdog();
+	if (targetDog.isPrepared != true) //check if already prepared
+	{
+		targetDog.creamCheese += creamCheeseaApps;
+		targetDog.relish += relishApps;
+		targetDog.mustard += mustardApps;
+		printf("\nAdding %d spread(s) of cream cheese, %d squirt(s) of relish, and %d squirt(s) of mustard.\n",
+			creamCheeseaApps, relishApps, creamCheeseaApps);
+	}
+	
+	return targetDog;
 }
 
+// Zomawia sailo
 void printHotdog(const Hotdog & targetDog)
 {
+	printf("Hotdog is ");
+	if (targetDog.isPrepared) printf("prepared.\n");
+	else printf("not prepared.\n");
+
+	printf("Amount of relish: %d squirt(s)\n", targetDog.relish);
+	printf("Amount of cream cheese (gross): %d spread(s)\n", targetDog.creamCheese);
+	printf("Amount of mustard: %d squirt(s)\n", targetDog.mustard);
+	
 }
 
 void cookHotdog(Hotdog & targetDog)
