@@ -33,7 +33,7 @@ int divideAndConquer(int nums[], size_t numSize);
 
 // Returns the overlap amount between two 1-dimensional objects.
 // More Information: http://goo.gl/YS0hc1
-float displacementOverlap(float aMin, float aMax, float bMin, float bMax);
+int displacementOverlap(int aMin, int aMax, int bMin, int bMax);
 
 // Returns the value converted into radians.
 float degToRad(float deg);

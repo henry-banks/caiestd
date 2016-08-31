@@ -15,9 +15,9 @@ int divideAndConquer(int nums[], size_t numSize)
     return 0;
 }
 
-float displacementOverlap(float aMin, float aMax, float bMin, float bMax)
+int displacementOverlap(int aMin, int aMax, int bMin, int bMax)
 {
-    return 0.0f;
+    return 0;
 }
 
 float degToRad(float deg)
