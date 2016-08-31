@@ -11,10 +11,7 @@ Point2D pointSub(const Point2D & lhs, const Point2D & rhs)
     return Point2D();
 }
 
-int divideAndConquer(int nums[], size_t numSize)
-{
-    return 0;
-}
+
 
 int displacementOverlap(int aMin, int aMax, int bMin, int bMax)
 {

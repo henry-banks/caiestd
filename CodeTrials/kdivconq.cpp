@@ -6,7 +6,7 @@
 int divideAndConquer(int nums[], size_t numSize)
 {
 
-
+	return 0;
 }
 
 
