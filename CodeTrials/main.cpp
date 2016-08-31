@@ -22,7 +22,7 @@ int main()
         ASSERT_FLOAT_EQ(2.0f, pointAddResult.x, "POINT ADD (x)", "x value did not match");
         ASSERT_FLOAT_EQ(4.0f, pointAddResult.y, "POINT ADD (y)", "y value did not match");
 
-        Point2D pointSubResult = pointAdd(pointA, pointB);
+        Point2D pointSubResult = pointSub(pointA, pointB);
         ASSERT_FLOAT_EQ(-2.0f, pointSubResult.x, "POINT SUB (x)", "x value did not match");
         ASSERT_FLOAT_EQ(-2.0f, pointSubResult.y, "POINT SUB (y)", "y value did not match");
 
@@ -39,10 +39,10 @@ int main()
 
         // Unit Conversion
         float radResult = degToRad(180.f); // set your calculators... to RAD.
-        ASSERT_FLOAT_EQ(3.14159, radResult, "Degrees to Radians", "");
+        ASSERT_FLOAT_EQ(3.141593, radResult, "Degrees to Radians", "");
         
         float degResult = radToDeg(1.f);
-        ASSERT_FLOAT_EQ(57.2958, degResult, "Radians to Degrees", "");
+        ASSERT_FLOAT_EQ(57.29580, degResult, "Radians to Degrees", "");
 
         float powResult = pow(2, 4);
         ASSERT_EQ(16, powResult, "Exponentiation", "");
