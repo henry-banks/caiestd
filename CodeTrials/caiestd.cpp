@@ -40,7 +40,7 @@ int pow(int base, int power)
 float distance(Point2D first, Point2D second)
 {
 	float d = 0;
-
+	//test
 	d = sqrt(((second.x - first.x)* (second.x - first.x)) + ((second.y - first.y)*(second.y - first.y)));
 
 	return d;
