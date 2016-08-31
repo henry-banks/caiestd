@@ -19,6 +19,9 @@ struct Hotdog
     int creamCheese;
 };
 
+Point2D  pointAdd(const Point2D &lhs, const Point2D &rhs);
+Point2D  pointSub(const Point2D &lhs, const Point2D &rhs);
+
 int divideAndConquer(int nums[], size_t numSize);
 float displacementOverlap(float aMin, float aMax, float bMin, float bMax);
 
@@ -35,7 +38,7 @@ void concatIntArray(int srcA[], size_t srcSizeA,
                     int dest[], size_t destSizeB);
 
 // Can not apply to hotdogs that have already been prepared.
-bool applyHotdog(Hotdog &targetDog,
+Hotdog& applyHotdog(Hotdog &targetDog,
                     int relishApps,
                     int mustardApps,
                     int creamCheeseaApps);
